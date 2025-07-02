@@ -6,26 +6,30 @@ const EmployeesList = ({ employeesData }) => {
   }
 
   return (
-    <div className="employees-list">
-      <div className="employee-card header">
-        <ul className="employee-details">
-          <li>ID</li>
-          <li>Name</li>
-          <li>Email</li>
-          <li>Role</li>
-        </ul>
-      </div>
-      {employeesData.map((employee) => (
-        <EmployeeCard
-          key={employee.id}
-          id={employee.id}
-          name={employee.name}
-          email={employee.email}
-          role={employee.role}
-        />
-      ))}
+    <>
+    <table className="employees-list">
+      <thead>
+        <tr className="employee-card header">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        {employeesData.map((employee) => (
+          <EmployeeCard
+            key={employee.id}
+            id={employee.id}
+            name={employee.name}
+            email={employee.email}
+            role={employee.role}
+          />
+        ))}
+      </tbody>
+    </table>
       <hr />
-    </div>
+      </>
   );
 };
 

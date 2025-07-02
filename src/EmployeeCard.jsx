@@ -1,13 +1,11 @@
 const EmployeeCard = ({ id, name, email, role }) => {
   return (
-    <div className="employee-card">
-      <ul className="employee-details">
-        <li>{id}</li>
-        <li>{name}</li>
-        <li>{email}</li>
-        <li>{role}</li>
-      </ul>
-    </div>
+    <tr className="employee-card">
+      <td>{id}</td>
+      <td>{name}</td>
+      <td>{email}</td>
+      <td>{role}</td>
+    </tr>
   );
 };
 
