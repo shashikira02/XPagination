@@ -19,11 +19,11 @@ const Pagination = ({
   };
   return (
     <div className="pagination">
-        <button onClick={handlePrevious} disabled={currentPage === 1}>
+        <button onClick={handlePrevious} >
           Previous
         </button>
         <span className="current-page">{currentPage}</span>
-        <button onClick={handleNext} disabled={currentPage === totalPages}>
+        <button onClick={handleNext} >
           Next
         </button>
       </div>
